@@ -1,0 +1,21 @@
+{
+  "name": "azurlane-dock-api",
+  "version": "0.1.0",
+  "description": "API to use my Azur Lane Dock project.",
+  "main": "index.js",
+  "author": "ilyAkagi",
+  "license": "MIT",
+  "dependencies": {
+    "@azurapi/azurapi": "^1.1.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  }
+}
