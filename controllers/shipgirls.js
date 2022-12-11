@@ -8,7 +8,7 @@ const getAllShipgirls = (req, res) => {
     const { n = '', r = '', h = '', s = '' } = req.query;
 
     try {
-        let shipgirls = client.ships.map((ship) => ({
+        let shipgirls = client.ships.raw.map((ship) => ({
             id: ship.id,
             name: ship.names.en,
             thumbnail: ship.thumbnail,
