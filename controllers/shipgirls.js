@@ -52,6 +52,7 @@ const getShipgirl = (req, res) => {
                 id: shipgirlData.id,
                 names: shipgirlData.names,
                 hullType: shipgirlData.hullType,
+                rarity: shipgirlData.rarity,
                 class: shipgirlData.class,
                 skills: shipgirlData.skills,
                 misc: shipgirlData.misc,
