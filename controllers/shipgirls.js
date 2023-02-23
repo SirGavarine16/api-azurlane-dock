@@ -4,10 +4,20 @@ const { sortShipgirls } = require('./../utils/sorting');
 
 const client = new AzurAPI();
 
-const getAllShipgirls = (req, res) => {
+const delay = (ms) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve('');
+        }, ms);
+    });
+}
+
+const getAllShipgirls = async (req, res) => {
     const { n = '', r = '', h = '', s = '' } = req.query;
 
     try {
+        await delay(1000);
+
         let shipgirls = client.ships.raw.map((ship) => ({
             id: ship.id,
             name: ship.names.en,
@@ -41,10 +51,12 @@ const getAllShipgirls = (req, res) => {
     }
 }
 
-const getShipgirl = (req, res) => {
+const getShipgirl = async (req, res) => {
     const { name } = req.params;
 
     try {
+        await delay(1000);
+
         const shipgirlData = client.ships.get(name);
 
         if (shipgirlData) {
